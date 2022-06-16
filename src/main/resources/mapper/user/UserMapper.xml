@@ -45,6 +45,15 @@
         WHERE NUM=#{num}
     </update>
 
+    <insert id="write">
+        <selectKey keyProperty="num" resultType="long" order="BEFORE">
+            SELECT SEQ_ADMIN_BOARD.NEXTVAL FROM DUAL
+        </selectKey>
+        INSERT INTO TBL_ADMIN_BOARD
+        (NUM, TITLE, CONTENT, USER_NUM)
+        VALUES(#{num}, #{title}, #{content}, #{userNum})
+    </insert>
+
 
 
 
