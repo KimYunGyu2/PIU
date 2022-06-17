@@ -54,6 +54,12 @@
         VALUES(#{num}, #{title}, #{content}, #{userNum})
     </insert>
 
+    <select id="getAdminList" resultType="">
+
+    </select>
+
+
+
 
 
 

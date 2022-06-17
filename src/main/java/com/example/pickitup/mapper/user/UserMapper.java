@@ -14,6 +14,9 @@ public interface UserMapper {
 //    관리자 공지등록
     public void write(AdminBoardVO adminBoardVO);
 
+//    관리자쪽 게시물 목록
+    public List<AdminBoardVO> getAdminList(Criteria criteria);
+
 //    유저 목록
     public  List<UserVO> getList(Criteria criteria);
 
