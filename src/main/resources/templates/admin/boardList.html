@@ -38,13 +38,72 @@
                         <th>기간</th>
                         <td>
                             <div class="dateSelect" id="boardDateSelect">
-                                <a class="btnDate" href="">오늘</a>
-                                <a class="btnDate" href="">3일</a>
-                                <a class="btnDate" href="">7일</a>
-                                <a class="btnDate" href="">1개월</a>
-                                <a class="btnDate" href="">3개월</a>
-                                <a class="btnDate" href="">1년</a>
-                                <a class="btnDate" href="">전체</a>
+                                <!-- search -->
+                                <table class="searchBoxCal">
+                                    <colgroup>
+                                        <col width="123px">
+                                        <col width="*">
+                                    </colgroup>
+                                    <div class="calcal" >
+                                        <ul class="searchDate" style="margin: 0; padding: 0; margin-bottom: 10px; display: flex; justify-content: center;">
+                                            <li>
+                                                <span class="chkbox2">
+                                                    <input type="radio" name="dateType" id="dateType1" onclick="setSearchDate('0d')"/>
+                                                    <label for="dateType1">당일</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chkbox2">
+                                                    <input type="radio" name="dateType" id="dateType3" onclick="setSearchDate('1w')"/>
+                                                    <label for="dateType3">1주</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chkbox2">
+                                                    <input type="radio" name="dateType" id="dateType4" onclick="setSearchDate('2w')"/>
+                                                    <label for="dateType4">2주</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chkbox2">
+                                                    <input type="radio" name="dateType" id="dateType5" onclick="setSearchDate('1m')"/>
+                                                    <label for="dateType5">1개월</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chkbox2">
+                                                    <input type="radio" name="dateType" id="dateType6" onclick="setSearchDate('3m')"/>
+                                                    <label for="dateType6">3개월</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chkbox2">
+                                                    <input type="radio" name="dateType" id="dateType7" onclick="setSearchDate('6m')"/>
+                                                    <label for="dateType7">6개월</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="chkbox2">
+                                                    <input type="radio" name="dateType" id="dateType8" onclick="setSearchDate('1y')"/>
+                                                    <label for="dateType8">1년</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+
+                                        <div class="clearfix">
+                                            <!-- 시작일 -->
+                                            <span class="dset">
+                                                <input type="text" class="datepicker inpType" name="searchStartDate" id="searchStartDate" >
+                                            </span>
+                                            <span class="demi">~</span>
+                                            <!-- 종료일 -->
+                                            <span class="dset">
+                                                <input type="text" class="datepicker inpType" name="searchEndDate" id="searchEndDate" >
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </table>
                             </div>
                         </td>
                     </tr>
