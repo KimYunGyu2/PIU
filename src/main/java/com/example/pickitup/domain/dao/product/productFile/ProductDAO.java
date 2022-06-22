@@ -16,8 +16,8 @@ public class ProductDAO {
     private final ProductMapper productMapper;
 
     // 상품 목록
-    public List<ProductVO> getList(){
-        return productMapper.getList();
+    public List<ProductVO> getList(String category){
+        return productMapper.getList(category);
     }
     //상품 하나의 디테일
     public ProductVO getDetail(Long num){
@@ -50,6 +50,9 @@ public class ProductDAO {
 
 
     // 상품 개수 - 관리자용
+    public int count(){
+        return productMapper.count();
+    }
 
 
 }
